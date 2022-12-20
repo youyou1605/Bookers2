@@ -11,6 +11,7 @@
   </head>
 
   <body>
+     <%= render 'layouts/notifications' %>
     <header>
       <% if user_signed_in? %>
         <%= link_to "Home", user_path(current_user.id) %>
@@ -27,8 +28,8 @@
       </li>
       <% end %>
     </header>
-    
+
     <%= yield %>
-    
+
   </body>
 </html>
